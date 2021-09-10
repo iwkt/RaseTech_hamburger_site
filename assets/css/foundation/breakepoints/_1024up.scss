@@ -67,14 +67,15 @@
   }
 }
 
-.p-mainvisual {
-  &__layer {
-    height: calc(512 / 1920 * 100vw);
-    max-height: 512px;
-    padding: 0 0 0 6.5rem;
-  }
-  &__title {
-    font-size: 4rem;
-    color: #fff;
-  }
-}
+// .p-mainvisual {
+//   &__layer {
+//     height: calc(512 / 1920 * 100vw);
+//     max-height: 512px;
+//     padding: 0 0 0 6.5rem;
+//   }
+//   &__title {
+//     font-size: 4rem;
+//     color: #fff;
+//     letter-spacing: 1.2px;
+//   }
+// }
