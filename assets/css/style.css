@@ -396,6 +396,16 @@
   .p-mainvisual__layer--cheese {
     background: url(../images/cheese_mv-pc@2x.jpg);
     background-size: cover;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -422,6 +432,12 @@
   z-index: 1;
   font-size: 1.6rem;
   color: #fff;
+}
+
+@media screen and (min-width: 600px) {
+  .p-mainvisual__sub-title {
+    padding-top: 7px;
+  }
 }
 
 .p-mainvisual__tittle {
