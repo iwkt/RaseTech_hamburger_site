@@ -66,14 +66,14 @@ $width: calc(100% - 367 / 834 * 100%);
   }
 }
 
-.p-mainvisual {
-  &__layer {
-    background: url(../images/hamburger@2x.jpg);
-    background-position: 100% 100%;
-    background-size: cover;
-    height: calc(285 / 834 * 100vw);
-  }
-}
+// .p-mainvisual {
+//   &__layer {
+//     background: url(../images/hamburger@2x.jpg);
+//     background-position: 100% 100%;
+//     background-size: cover;
+//     height: calc(285 / 834 * 100vw);
+//   }
+// }
 
 .p-sidebar {
   &__btn-close {

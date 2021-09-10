@@ -353,7 +353,7 @@
   height: 100%;
 }
 
-.p-mainvisual__layer {
+.p-mainvisual__layer, .p-mainvisual__layer--index, .p-mainvisual__layer--archive {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -364,29 +364,42 @@
       -ms-flex-align: center;
           align-items: center;
   padding-left: 3.5rem;
-  background: url(../images/mv_mobile608x800@2x.jpg);
-  background-position: 100% 100%;
-  background-size: cover;
   height: calc(285 / 375 * (100vw - 13px));
 }
 
+@media screen and (min-width: 600px) {
+  .p-mainvisual__layer, .p-mainvisual__layer--index, .p-mainvisual__layer--archive {
+    height: calc(285 / 834 * 100vw);
+  }
+}
+
 @media screen and (min-width: 1024px) {
-  .p-mainvisual__layer {
+  .p-mainvisual__layer, .p-mainvisual__layer--index, .p-mainvisual__layer--archive {
     height: calc(512 / 1920 * 100vw);
     max-height: 512px;
     padding: 0 0 0 6.5rem;
   }
 }
 
-.p-mainvisual__layer--cheese {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.p-mainvisual__layer--index {
+  background: url(../images/mv_mobile608x800@2x.jpg);
+  background-position: 100% 100%;
+  background-size: cover;
+}
+
+@media screen and (min-width: 600px) {
+  .p-mainvisual__layer--index {
+    background: url(../images/hamburger@2x.jpg);
+    background-position: 100% 100%;
+    background-size: cover;
+  }
+}
+
+.p-mainvisual__layer--archive {
   position: relative;
   background: url(../images/cheese_mv-pc@2x.jpg);
   background-position: 0% 0%;
   background-size: cover;
-  padding-left: 3.5rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
@@ -401,9 +414,7 @@
 }
 
 @media screen and (min-width: 600px) {
-  .p-mainvisual__layer--cheese {
-    background: url(../images/cheese_mv-pc@2x.jpg);
-    background-size: cover;
+  .p-mainvisual__layer--archive {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -417,7 +428,7 @@
   }
 }
 
-.p-mainvisual__layer--cheese::before {
+.p-mainvisual__layer--archive::before {
   content: "";
   position: absolute;
   top: 0;
@@ -455,22 +466,6 @@
   .p-mainvisual__sub-title {
     padding-top: 7px;
   }
-}
-
-.p-mainvisual__layer {
-  height: calc(512 / 1920 * 100vw);
-  max-height: 512px;
-  padding: 0 0 0 6.5rem;
-}
-
-.p-mainvisual__title {
-  font-size: 4rem;
-  color: #fff;
-  letter-spacing: 1.2px;
-}
-
-.p-mainvisual__tittle {
-  position: absolute;
 }
 
 .p-menu {
@@ -1041,12 +1036,6 @@ body {
   .p-branch__item:first-child {
     margin-bottom: 0;
     margin-right: 4rem;
-  }
-  .p-mainvisual__layer {
-    background: url(../images/hamburger@2x.jpg);
-    background-position: 100% 100%;
-    background-size: cover;
-    height: calc(285 / 834 * 100vw);
   }
   .p-sidebar__btn-close {
     position: absolute;
