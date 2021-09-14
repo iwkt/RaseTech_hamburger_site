@@ -10,10 +10,15 @@
   transition: left .3s;
   background-color: #F2EDE9;
   font-size: 2rem;
+  
   &.js-is_open {
-    left: $width;
+    left: $width;//variableに記載
     overflow-y: scroll;
     height: 100vh;
+    @include mq() {
+      $width: calc(100% - 367 / 834 * 100%);
+      left: $width;//variableに記載
+    }
   }
   &__btn-close {
     position: absolute;
@@ -24,6 +29,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include mq() {
+      position: absolute;
+      top: 25px;
+      right: calc(17px + 56%);
+    }
   }
   &__mainmenu-item {
     margin-bottom: 2.3rem;
@@ -41,10 +52,23 @@
 }
 
 // =========================================
-@media(min-width: 1024px) {
+@include mq(md) {
   .p-sidebar {
+    position: static;
+    min-width: 267px;
+    height: auto;
     &__btn-close {
       display: none;
     }
   }
 }
+// @media(min-width: 1024px) {
+//   .p-sidebar {
+//     position: static;
+//     min-width: 267px;
+//     height: auto;
+//     &__btn-close {
+//       display: none;
+//     }
+//   }
+// }

@@ -72,22 +72,47 @@
         background-color: rgba($color: #000000, $alpha: 0.5);
       }
     }
-  }
+    &--history {
+      @extend .p-mainvisual__layer;
+      height: calc(225 / 375 * (100vw - 13px));
+      background: url(../images/mv_history@2x.jpg);
+      background-position: 50% 50%;
+      background-size: cover;
 
-  &__title {
-    position: static;
-    z-index: 1;
-    font-size: 3.6rem ;
-    font-family: Roboto;
-    color: #fff;
-    
-    @include mq() {
-      margin-right: 1rem;
-      font-size: 4rem;
-      color: #fff;
-      letter-spacing: 1.2px;
+      @include mq() {
+        max-height: 500px;
+        padding: 0 0 0 6.5rem;
+      }    
+    }
+    &--shop {
+      @extend .p-mainvisual__layer;
+      height: calc(225 / 375 * (100vw - 13px));
+      background: url(../images/shop@2x.jpg);
+      background-position: 50% 50%;
+      background-size: cover; 
+      
+      @include mq() {
+        max-height: 500px;
+        padding: 0 0 0 6.5rem;
+      }
     }
   }
+
+  // &__title {
+  //   position: static;
+  //   z-index: 1;
+  //   font-size: 3.6rem ;
+  //   font-family: Roboto;
+  //   color: #fff;
+    
+  //   @include mq() {
+  //     margin-right: 1rem;
+  //     font-size: 4rem;
+  //     color: #fff;
+  //     letter-spacing: 1.2px;
+      
+  //   }
+  // }
 
   
   &__sub-title {
@@ -102,18 +127,48 @@
   }
 }
 
-// .p-mainvisual {
-//   &__layer {
-//     height: calc(512 / 1920 * 100vw);
-//     max-height: 512px;
-//     padding: 0 0 0 6.5rem;
-//   }
-//   &__title {
-//     font-size: 4rem;
-//     color: #fff;
-//     letter-spacing: 1.2px;
-//   }
+// .p-mainvisual__layer--history {
+//   @extend .p-mainvisual__layer;
+//   background: url(../images/cheese_mv-pc@2x.jpg);
+//   // background: url(../images/mv_history@2x.jpg);
+//   background-position: 50% 50%;
+//   background-size: cover;      
 // }
+.p-mainvisual__title {
+  position: static;
+  z-index: 1;
+  font-size: 3.6rem ;
+  font-family: Roboto;
+  font-size: 3.6rem;
+  color: #fff;
+  letter-spacing: 1.2px;
+
+  &--font-lg {
+    @extend .p-mainvisual__title;
+  }
+}
+
+@include mq() {
+  .p-mainvisual__title {
+    font-size: 3.6rem;
+    color: #fff;
+    letter-spacing: 1.2px;
+  
+    &--font-lg {
+      font-size: 6rem;
+    }
+  }
+}
+
+@include mq(lg) {
+  .p-mainvisual__title {
+    font-size: 4rem;
+  
+    &--font-lg {
+      font-size: 6rem;
+    }
+  }
+}
 // .layer-in{
 //   position: absolute;
 //   top: 0;

@@ -32,16 +32,17 @@
               <button id="js-menu_open" class="p-header__menu-btn  p-menu">Menu</button></p>
               <div class="p-header__wrapper">
                 <div class="p-header__outer">
-                  <h1 class="p-header__title">Hamburger</h1>
+                  <h1 class="p-header__title"><a href="index.html">Hamburger</a></h1>
                   <div class="p-header__form">
                     <form action="#">
                       <label for="search">
                         <div class="p-search__wrapper">
                           <div class="p-search__field-wrapper mr">
                             <span class="c-icon-btn c-beforeicon-btn--download"></span><input class="p-search-field" type="search" name="search">
+                          </div>
+                          <input class="c-gradietion-btn" type="submit" name="submit" value="検索">
                         </div>
                       </label>
-                      <input class="c-search-btn" type="submit" name="submit" value="検索">
                     </form>
                   </div>
                 </div>
@@ -106,14 +107,16 @@
             <section class="p-access">
               <div class="p-access__map">
                 <div class="p-access-text__inner">
-                  <h2 class="p-access__title u-mb--m"><span class="p-text-bar--long u-mb--m">アクセス</span></h2>
-                  <p class="p-access__description">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ex, molestias provident enim dignissimos unde minus ab suscipit minima at ea repudiandae atque ut earum tempore architecto odit quaerat ipsa.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ex, molestias provident enim dignissimos unde minus ab suscipit minima at ea repudiandae atque ut earum tempore architecto odit quaerat Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ex, molestias provident enim dignissimos unde minus ab suscipit.
-                  </p>
+                  <div class="p-access-text__wrapper">
+                    <h2 class="p-access__title u-mb--m"><span class="p-text-bar--long u-mb--m">アクセス</span></h2>
+                    <p class="p-access__description">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ex, molestias provident enim dignissimos unde minus ab suscipit minima at ea repudiandae atque ut earum tempore architecto odit quaerat ipsa.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ex, molestias provident enim dignissimos unde minus ab suscipit minima at ea repudiandae atque ut earum tempore architecto odit quaerat Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ex, molestias provident enim dignissimos unde minus ab suscipit.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </section>
-
+            </section>    
+    
             </main>
             <!-- l-container__left  -->
 
@@ -128,7 +131,7 @@
                 <h3 class="p-sidebar__mainmenu-item">{{ item.category }}</h3>
                 <ul class="p-sidebar__submenu-items">
                   <li v-for="subitem in item.names" class="p-sidebar__submenu-item">
-                    <a href="#">{{ subitem }}</a>
+                    <a href="archive.html">{{ subitem }}</a>
                   </li>
                 </ul>
               </li>
@@ -140,7 +143,7 @@
       <footer class="l-footer">
         <div class="p-footer__layer">
           <div class="p-footer__info-wrapper">
-            <div class="p-footer__info">ショップ情報 | ヒストリー</div>
+            <div class="p-footer__info"><a href="page.html">ショップ情報</a> | ヒストリー</div>
             <div class="p-copyright">Copyright: RaiseTech</div>
           </div>
         </div>

@@ -14,9 +14,12 @@
       overflow: hidden;
     }
   }
-
+  
   @include mq() {
     &__item {
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
       &:nth-last-child(-n+2) {
         display: none;
       }

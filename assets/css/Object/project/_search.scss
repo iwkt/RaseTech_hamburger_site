@@ -6,6 +6,10 @@
 .p-search__wrapper {
   display: flex;
   align-items: center;
+  
+  @include mq() {
+    justify-content: center;
+  }
   // justify-content: flex-end;
   // padding: 0px 36px 0 24px;
   // height: 46px;

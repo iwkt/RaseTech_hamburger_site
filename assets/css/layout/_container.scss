@@ -19,35 +19,72 @@
 }
 .l-container {
   display: block;
+  width: 100%;
+  @include mq(md) {
+    display: flex;  
+  }
 }
 
 .l-container__left {
-  flex: 81;
+  @include mq(md) {
+    // flex: 81;
+    width: calc(1553 / 1920 * 100vw);
+    max-width: 1553px;
+    // flex: 19;
+    display: flex;
+    // position: static;
+    // height: auto;
+  }
 }
 
 
 .l-container__right {
-  min-width: 267px;
-  // $width: 15%;
-  // display: block;
-  // position: absolute;
-  // top: 0;
-  // left: 100% + $width;
-  // height: 100%;
-  // width: 100%;
-  // z-index: 100;
-  // transition: left .3s;
-  // &.js-is_open {
-  //   left: $width;
-  // }
+  @include mq() {
+    left: 100%;
+    &.js-is_open {
+      $width: calc(100% - 367 / 834 * 100%);
+      left: $width;//variableに記載
+    }
+  }
+  @include mq(md) {
+    flex: 19;
+    display: flex;
+  }
 }
 
 .c-section__container {
   margin: 0 auto;
   padding: 20px 20px;
-  max-width: 1434px;
+  max-width: 1553px;
+  // margin-bottom: 3rem;
+  &--mb {
+    // margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 3rem;
+    
+    @include mq() {
+      padding-left: 4rem;
+      padding-right: 4rem;
+      margin-bottom: 6rem;
+    }
+    @include mq(lg) {
+      max-width: 1353px;
+      padding-left: 4rem;
+      padding-right: 4rem;
+      margin: 0 auto 6rem;
+    }
+  }
+  
   @include mq(){
     padding-left: 40px;
     padding-right: 40px;
+    // margin-bottom: 6rem;
+  }
+}
+
+.l-main__container {
+  @include mq(lg) {
+    width: 100%;
   }
 }

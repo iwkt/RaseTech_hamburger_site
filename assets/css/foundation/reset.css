@@ -15,6 +15,8 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p,
 figure,
 blockquote,
@@ -36,6 +38,11 @@ div,ul,li {
 
 li {
   list-style: none;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
 }
 
 /* Set core root defaults */
