@@ -614,7 +614,7 @@
     height: 100%;
   }
   .p-header__title {
-    font-size: clamp(10px, fz, 8rem);
+    font-size: clamp(10px, calc(64 / 1920 * 100vw), 6.4rem);
   }
 }
 

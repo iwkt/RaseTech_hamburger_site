@@ -60,7 +60,7 @@
     }
     &__title {
       $fz: calc(64 / 1920 * 100vw);
-      font-size: clamp(10px,#{fz},8rem);
+      font-size: clamp(10px,#{$fz},6.4rem);
 
     }
   }
