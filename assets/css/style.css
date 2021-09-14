@@ -1177,7 +1177,7 @@
   width: 100%;
 }
 
-.p-product__table tr {
+.p-product__table th, .p-product__table td {
   border: 1px solid #707070;
 }
 
